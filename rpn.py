@@ -29,9 +29,9 @@ def calculate(myarg):
             token = int(token)
             stack.append(token)
         except ValueError:
-            if token == '//':
-                print('Found floordiv token')
-                print('Sadly, this line has no test coverage')
+            # if token == '//':
+            #     print('Found floordiv token')
+            #     print('Sadly, this line has no test coverage')
             function = operators[token]
             arg2 = stack.pop()
             arg1 = stack.pop()
