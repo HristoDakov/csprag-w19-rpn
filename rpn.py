@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 import operator
-
+import readline
+from termcolor import colored
 
 operators = {
     '+': operator.add,
@@ -12,7 +13,16 @@ operators = {
     '//': operator.floordiv,
 }
 
+def print_colorized_input(args):
+    colored_args = []
+    for token in args.split():
+        color = 'yellow' if token in operators else 'red' if int(token) < 0 else 'blue'
+        colored_args.append(colored(token, color))
+    print('User input: ' + ' '.join(colored_args))
+
+
 def calculate(myarg):
+    print_colorized_input(myarg)
     stack = list()
     for token in myarg.split():
         try:
@@ -35,7 +45,8 @@ def calculate(myarg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        print("Result: ", result)
+        color = 'red' if int(result) < 0 else 'blue'
+        print("Result: ", colored(result, color))
 
 if __name__ == '__main__':
     main()
