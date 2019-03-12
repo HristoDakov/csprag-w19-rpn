@@ -1,1 +1,2 @@
 [![Build Status](https://travis-ci.org/Ieonidas/csprag-w19-rpn.svg?branch=master)](https://travis-ci.org/Ieonidas/csprag-w19-rpn)
+[![Coverage](https://coveralls.io/repos/Ieonidas/csprag-w19-rpn/badge.png)](https://coveralls.io/r/Ieonidas/csprag-w19-rpn)
