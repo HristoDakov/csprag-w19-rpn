@@ -9,6 +9,7 @@ operators = {
     '*': operator.mul,
     '/': operator.truediv,
     '^': operator.pow,
+    '//': operator.floordiv,
 }
 
 def calculate(myarg):
